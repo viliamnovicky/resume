@@ -1,0 +1,27 @@
+.header {
+    padding-top: 35rem;
+    overflow: hidden;
+
+    &__heading,
+    &__heading--secondary {
+        text-transform: uppercase;
+        text-align: center;
+        color: $color-light;
+        animation: header 1s;
+    }
+
+    &__heading {
+        transition: all .5s;
+        letter-spacing: .2rem;
+        padding-left: .2rem;
+        font-weight: 200;
+
+        &--secondary {
+            letter-spacing:4.3rem;
+            padding-left: 4.3rem;
+            font-weight: 100;
+        }
+    }
+
+
+}

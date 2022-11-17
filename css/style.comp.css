@@ -1,0 +1,193 @@
+@keyframes avatar {
+  0% {
+    opacity: 0;
+    width: 35rem;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes header {
+  0% {
+    letter-spacing: 7rem;
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+h1 {
+  font-size: 8rem;
+}
+
+h2 {
+  font-size: 6rem;
+}
+
+h3 {
+  font-size: 4rem;
+}
+
+h4 {
+  font-size: 2rem;
+}
+
+h5 {
+  font-size: 1.6rem;
+}
+
+.img__avatar {
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 10%;
+  width: 25rem;
+  animation: avatar 1s;
+}
+.img__cont {
+  width: 8rem;
+  height: 8rem;
+  border-radius: 50%;
+  position: relative;
+  margin: auto;
+}
+.img__icon {
+  width: 5rem;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  filter: invert(44%) sepia(65%) saturate(1606%) hue-rotate(335deg) brightness(112%) contrast(87%);
+  filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(264deg) brightness(104%) contrast(106%);
+}
+
+.navbar {
+  position: absolute;
+  left: 5rem;
+  height: 100%;
+  width: 20rem;
+  z-index: 10;
+}
+.navbar__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 100%;
+  list-style-type: none;
+}
+.navbar__anchor {
+  text-decoration: none;
+  font-size: 3rem;
+  text-align: left;
+  color: black;
+}
+
+.section {
+  width: 96vw;
+  height: 90vh;
+  margin: auto;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
+  margin: left;
+}
+.section__header {
+  background: #3d5a80;
+  margin-top: 2vw;
+}
+.section__address {
+  position: relative;
+  background: #effeff;
+  clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 90%);
+  margin-top: -9rem;
+}
+.section__work {
+  background: #ee6c4d;
+  margin-top: -9rem;
+  clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 90%);
+}
+
+.address {
+  display: flex;
+  width: 100%;
+  padding: 0 55rem;
+  height: 100%;
+  justify-content: space-evenly;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: all 0.2s;
+}
+.address:hover {
+  padding: 0;
+}
+.address:hover .address__cont {
+  background: #fff;
+  width: 25vw;
+}
+.address:hover .address__icon {
+  top: -1rem;
+  width: 8rem;
+  height: 8rem;
+}
+.address__header {
+  position: absolute;
+}
+.address__cont {
+  width: 10rem;
+  height: 50rem;
+  border-radius: 2rem;
+  margin-top: 3rem;
+  position: relative;
+  transition: all 0.2s;
+  margin-top: 20rem;
+}
+.address__icon {
+  position: absolute;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background: #ee6c4d;
+  transition: all 0.2s;
+  width: 12rem;
+  height: 12rem;
+}
+
+.header {
+  padding-top: 35rem;
+  overflow: hidden;
+}
+.header__heading, .header__heading--secondary {
+  text-transform: uppercase;
+  text-align: center;
+  color: #effeff;
+  animation: header 1s;
+}
+.header__heading {
+  transition: all 0.5s;
+  letter-spacing: 0.2rem;
+  padding-left: 0.2rem;
+  font-weight: 200;
+}
+.header__heading--secondary {
+  letter-spacing: 4.3rem;
+  padding-left: 4.3rem;
+  font-weight: 100;
+}
+
+/*# sourceMappingURL=style.comp.css.map */

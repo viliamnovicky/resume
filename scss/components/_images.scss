@@ -1,0 +1,27 @@
+.img {
+
+    &__avatar {
+        border-radius: 50%;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 10%;
+        width: 25rem;
+        animation: avatar 1s;
+    }
+
+    &__cont {
+        width: 8rem;
+        height: 8rem;
+        border-radius: 50%;
+        position: relative;
+        margin: auto;
+    }
+
+    &__icon {
+        width: 5rem;
+        @include absolute-center;
+        filter: invert(44%) sepia(65%) saturate(1606%) hue-rotate(335deg) brightness(112%) contrast(87%);
+        filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(264deg) brightness(104%) contrast(106%);
+    }
+}

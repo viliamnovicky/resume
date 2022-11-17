@@ -1,0 +1,20 @@
+@keyframes avatar {
+    0% {
+        opacity: 0;
+        width: 35rem;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes header {
+    0% {
+        letter-spacing: 7rem;
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
