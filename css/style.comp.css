@@ -51,6 +51,50 @@ h5 {
   font-size: 1.6rem;
 }
 
+.btn {
+  text-decoration: none;
+  outline: none;
+  border: none;
+  width: 10rem;
+  height: 4rem;
+  border-radius: 2rem;
+  box-shadow: 0.5rem 0.5rem 2rem rgba(36, 36, 36, 0.2);
+  cursor: pointer;
+  font-size: 1.6rem;
+  transition: all 0.2s;
+}
+.btn__primary, .btn__secondary {
+  color: white;
+}
+.btn__primary--light, .btn__secondary--light {
+  box-shadow: none;
+  background: #fff;
+}
+.btn__primary--light:hover, .btn__secondary--light:hover {
+  color: white;
+  box-shadow: 0.5rem 0.5rem 2rem rgba(36, 36, 36, 0.2);
+}
+.btn__primary {
+  background: #3d5a80;
+}
+.btn__primary--light {
+  border: 2px solid #3d5a80;
+  color: #3d5a80;
+}
+.btn__primary--light:hover {
+  background: #3d5a80;
+}
+.btn__secondary {
+  background: #ee6c4d;
+}
+.btn__secondary--light {
+  border: 2px solid #ee6c4d;
+  color: #ee6c4d;
+}
+.btn__secondary--light:hover {
+  background: #ee6c4d;
+}
+
 .img__avatar {
   border-radius: 50%;
   position: absolute;
@@ -100,7 +144,7 @@ h5 {
 
 .section {
   width: 96vw;
-  height: 90vh;
+  height: 90rem;
   margin: auto;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
   margin: left;
@@ -134,24 +178,36 @@ h5 {
 }
 .address:hover {
   padding: 0;
+  padding-top: 15rem;
 }
 .address:hover .address__cont {
   background: #fff;
-  width: 25vw;
+  width: 45rem;
+  box-shadow: 0.5rem 0.5rem 2rem rgba(36, 36, 36, 0.2);
 }
 .address:hover .address__icon {
   top: -1rem;
   width: 8rem;
   height: 8rem;
 }
+.address:hover .address__text {
+  opacity: 1;
+}
 .address__header {
   position: absolute;
+  display: inline-block;
+  color: #242424 !important;
+  font-weight: 100;
+  text-align: center;
+  text-transform: uppercase;
+  top: 15rem;
+  left: 50%;
+  transform: translateX(-50%);
 }
 .address__cont {
   width: 10rem;
-  height: 50rem;
+  height: 40rem;
   border-radius: 2rem;
-  margin-top: 3rem;
   position: relative;
   transition: all 0.2s;
   margin-top: 20rem;
@@ -166,6 +222,33 @@ h5 {
   transition: all 0.2s;
   width: 12rem;
   height: 12rem;
+}
+.address__text {
+  position: absolute;
+  left: 5rem;
+  top: 8rem;
+  opacity: 0;
+}
+.address__paragraph {
+  font-size: 2rem;
+}
+.address__paragraph--email {
+  padding-bottom: 5rem;
+}
+.address__heading {
+  font-size: 4rem;
+  text-transform: uppercase;
+  font-weight: 100;
+  margin-bottom: 5rem;
+  position: relative;
+}
+.address__heading--email {
+  margin-bottom: 1rem;
+}
+.address__heading span {
+  position: absolute;
+  top: -1rem;
+  right: -11rem;
 }
 
 .header {

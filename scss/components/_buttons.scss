@@ -1,0 +1,54 @@
+.btn {
+    text-decoration: none;
+    outline: none;
+    border: none;
+    width: 10rem;
+    height: 4rem;
+    border-radius: 2rem;
+    box-shadow: .5rem .5rem 2rem rgba($color-dark, .2);
+    cursor: pointer;
+    font-size: $font-size-h5;
+    transition: all .2s;
+
+    &__primary,
+    &__secondary {
+        color: white;
+
+        &--light {
+            box-shadow: none;
+            background: $color-white;
+
+            &:hover {
+                color: white;
+                box-shadow: .5rem .5rem 2rem rgba($color-dark, .2);
+            }
+        }
+    }
+
+    &__primary {
+        background: $color-primary;
+
+        &--light {
+            border: 2px solid $color-primary;
+            color: $color-primary;
+
+            &:hover {
+                background: $color-primary;
+            }
+        }
+    }
+
+    &__secondary{
+        background: $color-secondary;
+
+        &--light {
+            border: 2px solid $color-secondary;
+            color: $color-secondary;
+
+            &:hover {
+                background: $color-secondary;
+            }
+        }
+    }
+
+}

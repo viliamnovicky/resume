@@ -11,11 +11,13 @@
     transition: all .2s;
 
     &:hover {
-        padding: 0 ;
+        padding: 0;
+        padding-top: 15rem;
 
         .address__cont {
             background: $color-white;
-            width: 25vw;
+            width: 45rem;
+            box-shadow: .5rem .5rem 2rem rgba($color-dark, .2);
         }
 
         .address__icon {
@@ -23,17 +25,28 @@
             width: 8rem;
             height: 8rem;
         }
+
+        .address__text {
+            opacity: 1;
+        }
     }
 
     &__header {
         position: absolute;
+        display: inline-block;
+        color: $color-dark !important;
+        font-weight: 100;
+        text-align: center;
+        text-transform: uppercase;
+        top: 15rem;
+        left: 50%;
+        transform: translateX(-50%);
     }
 
     &__cont {
         width: 10rem;
-        height: 50rem;
+        height: 40rem;
         border-radius: 2rem;
-        margin-top: 3rem;
         position: relative;
         transition: all .2s;
         margin-top: 20rem;
@@ -46,5 +59,38 @@
         transition: all .2s;
         width: 12rem;
         height: 12rem;
+    }
+
+    &__text {
+        position: absolute;
+        left: 5rem;
+        top: 8rem;
+        opacity: 0;
+    }
+
+    &__paragraph {
+        font-size: $font-size-h4;
+
+        &--email {
+            padding-bottom: 5rem;
+        }
+    }
+
+    &__heading {
+        font-size: $font-size-h3;
+        text-transform: uppercase;
+        font-weight: 100;
+        margin-bottom: 5rem;
+        position: relative;
+
+        &--email {
+            margin-bottom: 1rem;
+        }
+
+        span {
+            position: absolute;
+            top: -1rem;
+            right: -11rem;
+        }
     }
 }
