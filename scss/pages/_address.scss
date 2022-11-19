@@ -38,7 +38,7 @@
         font-weight: 100;
         text-align: center;
         text-transform: uppercase;
-        top: 15rem;
+        top: 22rem;
         left: 50%;
         transform: translateX(-50%);
         width: 100vw;
@@ -50,7 +50,7 @@
         border-radius: 2rem;
         position: relative;
         transition: all .2s;
-        margin-top: 20rem;
+        margin-top: 25rem;
     }
 
     &__icon {
@@ -73,21 +73,39 @@
             display: grid;
             grid-template-columns: 1fr 1fr;
             margin: auto;
-            width: 100%;
+            width: calc(100% - 6rem);
             left: 50%;
-            transform: translateX(-38%);
+            transform: translateX(-50%);
+            justify-content: space-between;
 
             .btn {
-                margin-top: .5rem;
+                margin-top: .4rem;
+                margin-left: 3.8rem;
             }
         }
     }
 
     &__paragraph {
         font-size: $font-size-h4;
+        position: relative;
 
         &--email {
             padding-bottom: 5rem;
+        }
+
+        span {
+            transition: all .2s;
+            position: absolute;
+            left: 120%;
+            text-transform: uppercase;
+            color:$color-white;  
+            background: $color-secondary;
+            padding: 1rem 2rem;
+            border-radius: 2rem;
+            font-weight: 300;
+            z-index: 10;
+            box-shadow: .5rem .5rem 2rem rgba($color-dark, .2);
+            font-size: $font-size-h5;
         }
     }
 

@@ -32,3 +32,12 @@ h4 {
 h5 {
     font-size: $font-size-h5;
 }
+
+.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+img {
+    pointer-events: none;
+}

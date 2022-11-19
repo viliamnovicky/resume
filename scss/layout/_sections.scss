@@ -1,25 +1,25 @@
 .section {
     width: 96vw;
-    height: 90rem;
+    height: 68rem;
     margin: auto;
-    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
+    //clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
     margin: left;
 
     &__header {
         background: $color-primary;
         margin-top: 2vw;
+        position: relative;
     }
 
     &__address {
         position: relative;
         background: $color-light;
-        clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 90%);
         margin-top: -9rem;
+        height: 90rem ;
     }
 
     &__work {
         background: $color-secondary;
         margin-top: -9rem;
-        clip-path: polygon(0 0, 100% 10%, 100% 100%, 0 90%);
     }
 }
