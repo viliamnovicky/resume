@@ -1,54 +1,114 @@
 .btn {
-    text-decoration: none;
-    outline: none;
-    border: none;
-    width: 10rem;
-    height: 4rem;
-    border-radius: 2rem;
-    box-shadow: .5rem .5rem 2rem rgba($color-dark, .2);
-    cursor: pointer;
-    font-size: $font-size-h5;
-    transition: all .2s;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  width: 10rem;
+  height: 4rem;
+  border-radius: 2rem;
+  box-shadow: 0.5rem 0.5rem 2rem rgba($color-dark, 0.2);
+  cursor: pointer;
+  font-size: $font-size-h5;
+  transition: all .2s;
+  text-align: center;
+  display: grid;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  z-index: 10;
 
-    &__primary,
-    &__secondary {
+  &__primary,
+  &__secondary {
+    color: white;
+
+    &--light,
+    &--img {
+      box-shadow: none;
+      background: $color-white;
+
+      &:hover {
         color: white;
-
-        &--light {
-            box-shadow: none;
-            background: $color-white;
-
-            &:hover {
-                color: white;
-                box-shadow: .5rem .5rem 2rem rgba($color-dark, .2);
-            }
-        }
+        box-shadow: 0.5rem 0.5rem 2rem rgba($color-dark, 0.2);
+      }
     }
 
-    &__primary {
+    &--img {
+      img {
+        height: 100%;
+        position: absolute;
+        @include absolute-center;
+        filter: invert(100%) sepia(1%) saturate(449%) hue-rotate(42deg)
+          brightness(117%) contrast(100%);
+        z-index: -1;
+      }
+    }
+  }
+
+  &__primary {
+    background: $color-primary;
+
+    &--light,
+    &--img {
+      border: 2px solid $color-primary;
+      color: $color-primary;
+
+      &:hover {
         background: $color-primary;
+      }
+    }
 
-        &--light {
-            border: 2px solid $color-primary;
-            color: $color-primary;
-
-            &:hover {
-                background: $color-primary;
-            }
+    &--light {
+        &:hover {
+            color: $color-white;
         }
     }
 
-    &__secondary{
+    &--img {
+        &:hover {
+            color: transparent;
+            border: 2px solid transparent;
+        }
+    }
+  }
+
+  &__secondary {
+    background: $color-secondary;
+
+    &--light {
+      border: 2px solid $color-secondary;
+      color: $color-secondary;
+
+      &:hover {
         background: $color-secondary;
-
-        &--light {
-            border: 2px solid $color-secondary;
-            color: $color-secondary;
-
-            &:hover {
-                background: $color-secondary;
-            }
-        }
+      }
     }
+  }
 
+  &__fb {
+ 
+    &:hover {
+        background: #4267B2
+    }
+  }
+
+  &__ig {
+    background: radial-gradient(circle, rgba(254,218,117,0) 0%, rgba(250,126,30,0) 20%, rgba(214,41,118,0) 40%, rgba(150,47,191,0) 60%, rgba(79,91,213,0) 80%);
+    
+    &:hover {
+        background: radial-gradient(circle, rgba(254,218,117,1) 0%, rgba(250,126,30,1) 20%, rgba(214,41,118,1) 40%, rgba(150,47,191,1) 60%, rgba(79,91,213,1) 80%);
+    }
+  }
+
+  &__github {
+ 
+    &:hover {
+        background: #24292f
+    }
+  }
+
+  &__linkedin {
+ 
+    &:hover {
+        background: #0a66c2
+    }
+  }
 }
