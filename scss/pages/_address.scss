@@ -1,24 +1,40 @@
 .address {
+    @include absolute-center-x;
     display: flex;
     width: 100%;
     padding: 0 55rem;
     height: 100%;
     justify-content: space-evenly;
     position: absolute;
-    //top: 15rem;
-    left: 50%;
-    transform: translateX(-50%);
     transition: all .2s;
     z-index: 10;
+
+    @include respond(ntb) {
+        top: 40rem;
+        flex-direction: column;
+        justify-content: center;
+        padding: 0;
+        height: 75%;
+    }
 
     &:hover {
         padding: 0;
         padding-top: 15rem;
 
+        @include respond(ntb) {
+            padding-top: 0;
+        }
+
         .address__cont {
             background: $color-white;
             width: 40rem;
             box-shadow: .5rem .5rem 2rem rgba($color-dark, .2);
+
+            @include respond(ntb) {
+                background: $color-white;
+                width: 50rem;
+                height: 40rem;
+            }
         }
 
         .address__icon {
@@ -43,6 +59,14 @@
         position: relative;
         transition: all .2s;
         margin-top: 25rem;
+        
+        @include respond(ntb) {
+            background: $color-white;
+            width: 50rem;
+            margin: auto;
+            height: 40rem;
+            box-shadow: .5rem .5rem 2rem rgba($color-dark, .2);
+        }
     }
 
     &__icon {
@@ -54,6 +78,12 @@
         height: 12rem;
         border: 1px solid $color-white;
         top: 65%;
+
+        @include respond(ntb) {
+            top: -5rem;
+            width: 8rem;
+            height: 8rem;
+        }
     }
 
     &__text {
@@ -61,6 +91,10 @@
         left: 3rem;
         top: 8rem;
         opacity: 0;
+
+        @include respond(ntb) {
+            opacity: 1;
+        }
 
         &--social {
             display: grid;
@@ -74,6 +108,10 @@
             .btn {
                 margin-top: .4rem;
                 margin-left: 3.8rem;
+
+                @include respond(ntb) {
+                    margin-left: 13.8rem;
+                }
             }
         }
     }
@@ -89,7 +127,6 @@
         span {
             transition: all .2s;
             position: absolute;
-            left: 120%;
             text-transform: uppercase;
             color:$color-white;  
             background: $color-secondary;
@@ -99,6 +136,10 @@
             z-index: 10;
             box-shadow: .5rem .5rem 2rem rgba($color-dark, .2);
             font-size: $font-size-h5;
+
+            @include respond(ntb) {
+                left: 0;
+            }
         }
     }
 
@@ -121,6 +162,10 @@
             position: absolute;
             top: .5rem;
             right: -10rem;
+
+            @include respond(ntb) {
+                right: -20rem;
+            }
         }
     }
 }

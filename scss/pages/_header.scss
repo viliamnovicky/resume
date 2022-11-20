@@ -8,6 +8,10 @@
         text-align: center;
         color: $color-light;
         animation: header 1s;
+
+        @include respond(ntb) {
+            animation: header-ntb 1s;
+        }
     }
 
     &__heading {
@@ -16,12 +20,20 @@
         padding-left: .2rem;
         font-weight: 200;
 
+        @include respond(ntb) {
+            font-size: $font-size-h2;
+        }
+
         &--secondary {
             letter-spacing:4.3rem;
             padding-left: 4.3rem;
             font-weight: 100;
+
+            @include respond(ntb) {
+                font-size: $font-size-h3;
+                letter-spacing:3.6rem;
+                padding-left: 3.6rem;
+            }
         }
     }
-
-
 }

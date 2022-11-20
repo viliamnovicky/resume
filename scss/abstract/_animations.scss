@@ -11,7 +11,17 @@
 
 @keyframes header {
     0% {
-        letter-spacing: 7rem;
+        letter-spacing: 6rem;
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes header-ntb {
+    0% {
+        letter-spacing: 5rem;
         opacity: 0;
     }
     100% {

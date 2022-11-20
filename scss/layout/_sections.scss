@@ -13,6 +13,10 @@
         text-transform: uppercase;
         top: 25rem;
         width: 100vw;
+
+        @include respond(ntb) {
+            font-size: $font-size-h3;
+        }
     }
 
     &__intro {
@@ -25,6 +29,10 @@
         position: relative;
         background: $color-light;
         height: 80rem;
+
+        @include respond(ntb) {
+            height: 200rem;
+        }
     }
 
     &__education {
