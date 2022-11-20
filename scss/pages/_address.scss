@@ -9,6 +9,7 @@
     left: 50%;
     transform: translateX(-50%);
     transition: all .2s;
+    z-index: 10;
 
     &:hover {
         padding: 0;
@@ -21,7 +22,7 @@
         }
 
         .address__icon {
-            top: -1rem;
+            top: -5rem;
             width: 8rem;
             height: 8rem;
         }
@@ -32,16 +33,7 @@
     }
 
     &__header {
-        position: absolute;
-        display: inline-block;
-        color: $color-dark !important;
-        font-weight: 100;
-        text-align: center;
-        text-transform: uppercase;
-        top: 22rem;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 100vw;
+        color: $color-dark;
     }
 
     &__cont {
@@ -55,12 +47,13 @@
 
     &__icon {
         position: absolute;
-        @include absolute-center;
+        @include absolute-center-x;
         background: $color-secondary;
         transition: all .2s;
         width: 12rem;
         height: 12rem;
         border: 1px solid $color-white;
+        top: 65%;
     }
 
     &__text {

@@ -1,43 +1,72 @@
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Raleway', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
 }
 
 body {
-    overflow-x: hidden;
+  overflow-x: hidden;
 }
 
 html {
-    font-size: 62.5%;
+  font-size: 62.5%;
 }
 
 h1 {
-    font-size: $font-size-h1;
+  font-size: $font-size-h1;
 }
 
 h2 {
-    font-size: $font-size-h2;
+  font-size: $font-size-h2;
 }
 
 h3 {
-    font-size: $font-size-h3;
+  font-size: $font-size-h3;
 }
 
 h4 {
-    font-size: $font-size-h4;
+  font-size: $font-size-h4;
 }
 
 h5 {
-    font-size: $font-size-h5;
+  font-size: $font-size-h5;
 }
 
 .hidden {
-    opacity: 0;
-    visibility: hidden;
+  opacity: 0;
+  visibility: hidden;
 }
 
 img {
-    pointer-events: none;
+  pointer-events: none;
+}
+
+// TEXT selection
+
+::selection {
+  color: $color-white;
+  background: $color-light-2;
+}
+
+// SCROLLBAR
+
+/* width */
+::-webkit-scrollbar {
+  width: 1.5rem;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: $color-light;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $color-light-2;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: $color-primary;
 }

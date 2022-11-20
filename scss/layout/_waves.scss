@@ -1,9 +1,12 @@
 .wave {
+    position: absolute;
+    top: 100%;
 
     &__1 {
-        position: absolute;
-        top: 56rem;
-        left: 0;
         z-index: 10;
+    }
+
+    &__2 {
+        z-index: 9;
     }
 }

@@ -1,0 +1,39 @@
+.education {
+
+    &__icons {
+        display: flex;
+        width: 30rem;
+        position: absolute;
+        @include absolute-center-x;
+        top: 50%;
+        justify-content: space-evenly;
+        transition: all .2s;
+
+        &:hover {
+            width: 100%;
+
+            .education__icon {
+                background: $color-white;
+
+                .img__icon {
+                    filter: invert(35%) sepia(22%) saturate(1001%) hue-rotate(174deg) brightness(89%) contrast(90%);
+                }
+            }
+        }
+    }
+
+    &__header {
+        color: $color-white;
+        letter-spacing: 1rem;
+        top: 30rem;
+    }
+
+    &__icon {
+        background: $color-secondary;
+        transition: all .2s;
+        width: 12rem;
+        height: 12rem;
+        border: 1px solid $color-white;
+        z-index: 10;
+    }
+}
