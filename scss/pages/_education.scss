@@ -2,22 +2,54 @@
 
     &__icons {
         display: flex;
-        width: 30rem;
+        width: 100%;
+        height: 100%;
         position: absolute;
-        @include absolute-center-x;
-        top: 50%;
+        padding: 0 80rem;
+        top: 15rem;
         justify-content: space-evenly;
         transition: all .2s;
 
         &:hover {
-            width: 100%;
+            padding: 0 10rem;
 
             .education__icon {
-                background: $color-white;
+                background: $color-secondary;
 
-                .img__icon {
-                    filter: invert(35%) sepia(22%) saturate(1001%) hue-rotate(174deg) brightness(89%) contrast(90%);
+                &--schools {
+                    left: 47.5rem;
+                    top: 41%;
                 }
+
+                &--courses {
+                    left: calc(100% - 47.5rem);
+                    top: 41%;
+                }
+
+            }
+
+            .education__text {
+                width: 50rem;
+                height: 40rem;
+                border-radius: 2rem;
+                left: 30rem;
+                top: 55%;
+            }
+
+            .education__heading,
+            .education__paragraph {
+                opacity: 1;
+                visibility: visible;
+            }
+
+            .education__heading {
+                font-size: $font-size-h3;
+                padding-bottom: .5rem;
+            }
+
+            .education__paragraph {
+                font-size: $font-size-h5;
+                padding-bottom: 2rem;
             }
         }
     }
@@ -35,5 +67,45 @@
         height: 12rem;
         border: 1px solid $color-white;
         z-index: 10;
+        position: absolute;
+        @include absolute-center;
+
+        .img__icon {
+            filter: invert(99%) sepia(0%) saturate(734%) hue-rotate(360deg) brightness(116%) contrast(100%);
+        }
+
+        &--schools {
+            left: 45%;
+        }
+
+        &--courses {
+            left: 55%;
+        }
+    }
+
+    &__text {
+        width: 20rem;
+        height: 20rem;
+        background: $color-white;
+        border-radius: 50%;
+        position: absolute;
+        @include absolute-center;
+        transition: all .2s;
+        overflow: hidden;
+    }
+
+    &__heading,
+    &__paragraph {
+        opacity: 0;
+        visibility: hidden;
+        padding-left: 3rem;
+    }
+
+    &__heading {
+        font-size: .1rem;
+    }
+
+    &__paragraph {
+        font-size: .1rem;
     }
 }

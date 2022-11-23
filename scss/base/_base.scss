@@ -42,6 +42,17 @@ img {
   pointer-events: none;
 }
 
+.heading {
+  font-size: $font-size-h3;
+  text-transform: uppercase;
+  font-weight: 100;
+  position: relative;
+}
+
+.paragraph {
+  font-size: $font-size-h4;
+}
+
 // TEXT selection
 
 ::selection {

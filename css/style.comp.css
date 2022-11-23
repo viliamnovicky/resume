@@ -9,7 +9,16 @@
 }
 @keyframes header {
   0% {
-    letter-spacing: 7rem;
+    letter-spacing: 6rem;
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes header-ntb {
+  0% {
+    letter-spacing: 5rem;
     opacity: 0;
   }
   100% {
@@ -58,6 +67,42 @@ h5 {
 
 img {
   pointer-events: none;
+}
+
+.heading {
+  font-size: 4rem;
+  text-transform: uppercase;
+  font-weight: 100;
+  position: relative;
+}
+
+.paragraph {
+  font-size: 2rem;
+}
+
+::selection {
+  color: #fff;
+  background: #98c1d9;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 1.5rem;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #effeff;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #98c1d9;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #3d5a80;
 }
 
 .btn {
@@ -191,56 +236,107 @@ img {
 }
 
 .section {
-  width: 96vw;
+  width: calc(100vw - 6rem);
   height: 68rem;
   margin: auto;
   margin: left;
 }
 .section__header {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: inline-block;
+  font-weight: 100;
+  text-align: center;
+  text-transform: uppercase;
+  top: 25rem;
+  width: 100vw;
+}
+@media only screen and (max-width: 85.5em) {
+  .section__header {
+    font-size: 4rem;
+  }
+}
+.section__intro {
   background: #3d5a80;
-  margin-top: 2vw;
+  margin-top: 2rem;
   position: relative;
 }
 .section__address {
   position: relative;
   background: #effeff;
-  margin-top: -9rem;
+  height: 80rem;
+}
+@media only screen and (max-width: 85.5em) {
+  .section__address {
+    height: 200rem;
+  }
+}
+.section__education {
+  background: #ee6c4d;
+  position: relative;
   height: 90rem;
 }
 .section__work {
   background: #ee6c4d;
-  margin-top: -9rem;
 }
 
-.wave__1 {
+.wave {
   position: absolute;
-  top: 56rem;
-  left: 0;
+  top: 100%;
+}
+.wave__1 {
   z-index: 10;
+}
+.wave__2 {
+  z-index: 9;
 }
 
 .address {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
   width: 100%;
   padding: 0 55rem;
   height: 100%;
   justify-content: space-evenly;
   position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
   transition: all 0.2s;
+  z-index: 10;
+}
+@media only screen and (max-width: 85.5em) {
+  .address {
+    top: 40rem;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0;
+    height: 75%;
+  }
 }
 .address:hover {
   padding: 0;
   padding-top: 15rem;
+}
+@media only screen and (max-width: 85.5em) {
+  .address:hover {
+    padding-top: 0;
+  }
 }
 .address:hover .address__cont {
   background: #fff;
   width: 40rem;
   box-shadow: 0.5rem 0.5rem 2rem rgba(36, 36, 36, 0.2);
 }
+@media only screen and (max-width: 85.5em) {
+  .address:hover .address__cont {
+    background: #fff;
+    width: 50rem;
+    height: 40rem;
+  }
+}
 .address:hover .address__icon {
-  top: -1rem;
+  top: -5rem;
   width: 8rem;
   height: 8rem;
 }
@@ -248,16 +344,7 @@ img {
   opacity: 1;
 }
 .address__header {
-  position: absolute;
-  display: inline-block;
-  color: #242424 !important;
-  font-weight: 100;
-  text-align: center;
-  text-transform: uppercase;
-  top: 22rem;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100vw;
+  color: #242424;
 }
 .address__cont {
   width: 10rem;
@@ -267,23 +354,44 @@ img {
   transition: all 0.2s;
   margin-top: 25rem;
 }
+@media only screen and (max-width: 85.5em) {
+  .address__cont {
+    background: #fff;
+    width: 50rem;
+    margin: auto;
+    height: 40rem;
+    box-shadow: 0.5rem 0.5rem 2rem rgba(36, 36, 36, 0.2);
+  }
+}
 .address__icon {
   position: absolute;
   position: absolute;
   left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%);
   background: #ee6c4d;
   transition: all 0.2s;
   width: 12rem;
   height: 12rem;
   border: 1px solid #fff;
+  top: 65%;
+}
+@media only screen and (max-width: 85.5em) {
+  .address__icon {
+    top: -5rem;
+    width: 8rem;
+    height: 8rem;
+  }
 }
 .address__text {
   position: absolute;
   left: 3rem;
   top: 8rem;
   opacity: 0;
+}
+@media only screen and (max-width: 85.5em) {
+  .address__text {
+    opacity: 1;
+  }
 }
 .address__text--social {
   display: grid;
@@ -298,8 +406,12 @@ img {
   margin-top: 0.4rem;
   margin-left: 3.8rem;
 }
+@media only screen and (max-width: 85.5em) {
+  .address__text--social .btn {
+    margin-left: 13.8rem;
+  }
+}
 .address__paragraph {
-  font-size: 2rem;
   position: relative;
 }
 .address__paragraph--email {
@@ -308,7 +420,6 @@ img {
 .address__paragraph span {
   transition: all 0.2s;
   position: absolute;
-  left: 120%;
   text-transform: uppercase;
   color: #fff;
   background: #ee6c4d;
@@ -319,12 +430,13 @@ img {
   box-shadow: 0.5rem 0.5rem 2rem rgba(36, 36, 36, 0.2);
   font-size: 1.6rem;
 }
+@media only screen and (max-width: 85.5em) {
+  .address__paragraph span {
+    left: 0;
+  }
+}
 .address__heading {
-  font-size: 4rem;
-  text-transform: uppercase;
-  font-weight: 100;
   margin-bottom: 5rem;
-  position: relative;
 }
 .address__heading--email {
   margin-bottom: 1rem;
@@ -337,6 +449,107 @@ img {
   top: 0.5rem;
   right: -10rem;
 }
+@media only screen and (max-width: 85.5em) {
+  .address__heading span {
+    right: -20rem;
+  }
+}
+
+.education__icons {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  padding: 0 80rem;
+  top: 15rem;
+  justify-content: space-evenly;
+  transition: all 0.2s;
+}
+.education__icons:hover {
+  padding: 0 10rem;
+}
+.education__icons:hover .education__icon {
+  background: #ee6c4d;
+}
+.education__icons:hover .education__icon--schools {
+  left: 47.5rem;
+  top: 41%;
+}
+.education__icons:hover .education__icon--courses {
+  left: calc(100% - 47.5rem);
+  top: 41%;
+}
+.education__icons:hover .education__text {
+  width: 50rem;
+  height: 40rem;
+  border-radius: 2rem;
+  left: 30rem;
+  top: 55%;
+}
+.education__icons:hover .education__heading,
+.education__icons:hover .education__paragraph {
+  opacity: 1;
+  visibility: visible;
+}
+.education__icons:hover .education__heading {
+  font-size: 4rem;
+  padding-bottom: 0.5rem;
+}
+.education__icons:hover .education__paragraph {
+  font-size: 1.6rem;
+  padding-bottom: 2rem;
+}
+.education__header {
+  color: #fff;
+  letter-spacing: 1rem;
+  top: 30rem;
+}
+.education__icon {
+  background: #ee6c4d;
+  transition: all 0.2s;
+  width: 12rem;
+  height: 12rem;
+  border: 1px solid #fff;
+  z-index: 10;
+  position: absolute;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.education__icon .img__icon {
+  filter: invert(99%) sepia(0%) saturate(734%) hue-rotate(360deg) brightness(116%) contrast(100%);
+}
+.education__icon--schools {
+  left: 45%;
+}
+.education__icon--courses {
+  left: 55%;
+}
+.education__text {
+  width: 20rem;
+  height: 20rem;
+  background: #fff;
+  border-radius: 50%;
+  position: absolute;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.2s;
+  overflow: hidden;
+}
+.education__heading, .education__paragraph {
+  opacity: 0;
+  visibility: hidden;
+  padding-left: 3rem;
+}
+.education__heading {
+  font-size: 0.1rem;
+}
+.education__paragraph {
+  font-size: 0.1rem;
+}
 
 .header {
   padding-top: 35rem;
@@ -348,16 +561,33 @@ img {
   color: #effeff;
   animation: header 1s;
 }
+@media only screen and (max-width: 85.5em) {
+  .header__heading, .header__heading--secondary {
+    animation: header-ntb 1s;
+  }
+}
 .header__heading {
   transition: all 0.5s;
   letter-spacing: 0.2rem;
   padding-left: 0.2rem;
   font-weight: 200;
 }
+@media only screen and (max-width: 85.5em) {
+  .header__heading {
+    font-size: 6rem;
+  }
+}
 .header__heading--secondary {
   letter-spacing: 4.3rem;
   padding-left: 4.3rem;
   font-weight: 100;
+}
+@media only screen and (max-width: 85.5em) {
+  .header__heading--secondary {
+    font-size: 4rem;
+    letter-spacing: 3.6rem;
+    padding-left: 3.6rem;
+  }
 }
 
 /*# sourceMappingURL=style.comp.css.map */

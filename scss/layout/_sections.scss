@@ -1,8 +1,7 @@
 .section {
-    width: 96vw;
+    width: calc(100vw - 6rem);
     height: 68rem;
     margin: auto;
-    //clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
     margin: left;
 
     &__header {
@@ -21,7 +20,7 @@
 
     &__intro {
         background: $color-primary;
-        margin-top: 2vw;
+        margin-top: 2rem;
         position: relative;
     }
 
@@ -38,7 +37,7 @@
     &__education {
         background: $color-secondary;
         position: relative;
-        height: 100rem;
+        height: 90rem;
     }
 
     &__work {

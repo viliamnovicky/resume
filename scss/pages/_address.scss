@@ -117,7 +117,6 @@
     }
 
     &__paragraph {
-        font-size: $font-size-h4;
         position: relative;
 
         &--email {
@@ -144,11 +143,7 @@
     }
 
     &__heading {
-        font-size: $font-size-h3;
-        text-transform: uppercase;
-        font-weight: 100;
         margin-bottom: 5rem;
-        position: relative;
 
         &--email {
             margin-bottom: 1rem;
