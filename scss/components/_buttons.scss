@@ -112,4 +112,13 @@
         background: #0a66c2
     }
   }
+
+  &__close {
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+  }
 }
