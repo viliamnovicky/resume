@@ -187,6 +187,25 @@ img {
 .btn__linkedin:hover {
   background: #0a66c2;
 }
+.btn__close {
+  width: 5rem;
+  height: 5rem;
+  border-radius: 50%;
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  background: #fff;
+  border: 2px solid #ee6c4d;
+}
+.btn__close:hover .btn__close--img {
+  width: 100%;
+}
+.btn__close--img {
+  transition: all 0.2s;
+  margin: auto;
+  width: 80%;
+  filter: invert(51%) sepia(86%) saturate(1893%) hue-rotate(332deg) brightness(101%) contrast(87%);
+}
 
 .img__avatar {
   border-radius: 50%;
@@ -233,6 +252,34 @@ img {
   font-size: 3rem;
   text-align: left;
   color: black;
+}
+
+.modal__overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(36, 36, 36, 0.7);
+  z-index: 20;
+  transition: all 0.2s;
+}
+.modal__cont {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  height: 90vh;
+  background: transparent;
+  border: 1px solid #fff;
+  border-radius: 2rem;
+  transition: all 0.2s;
+}
+.modal__img {
+  height: 100%;
+  margin: auto;
+  display: block;
+  border-radius: 2rem;
 }
 
 .section {
@@ -455,47 +502,59 @@ img {
   }
 }
 
-.education__icons {
-  display: flex;
+.education__cont {
   width: 100%;
   height: 100%;
   position: absolute;
   padding: 0 80rem;
   top: 15rem;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   justify-content: space-evenly;
   transition: all 0.2s;
 }
-.education__icons:hover {
+.education__cont:hover {
   padding: 0 10rem;
 }
-.education__icons:hover .education__icon {
+.education__cont:hover .education__icon {
   background: #ee6c4d;
+  transform: translateX(0%);
 }
-.education__icons:hover .education__icon--schools {
-  left: 47.5rem;
-  top: 41%;
+.education__cont:hover .education__icon--schools {
+  left: calc(100% - 14rem);
+  top: 2rem;
 }
-.education__icons:hover .education__icon--courses {
-  left: calc(100% - 47.5rem);
-  top: 41%;
+.education__cont:hover .education__icon--courses {
+  left: calc(100% - 14rem);
+  top: 2rem;
 }
-.education__icons:hover .education__text {
-  width: 50rem;
-  height: 40rem;
+.education__cont:hover .education__text {
   border-radius: 2rem;
-  left: 30rem;
+  background: #fff;
+}
+.education__cont:hover .education__text--schools {
+  width: 30vw;
+  height: 40rem;
+  left: 17vw;
   top: 55%;
 }
-.education__icons:hover .education__heading,
-.education__icons:hover .education__paragraph {
+.education__cont:hover .education__text--courses {
+  width: 60vw;
+  height: 40rem;
+  left: calc(100% - 32vw);
+  top: 55%;
+}
+.education__cont:hover .education__heading,
+.education__cont:hover .education__paragraph {
   opacity: 1;
   visibility: visible;
 }
-.education__icons:hover .education__heading {
+.education__cont:hover .education__heading {
   font-size: 4rem;
   padding-bottom: 0.5rem;
 }
-.education__icons:hover .education__paragraph {
+.education__cont:hover .education__paragraph {
   font-size: 1.6rem;
   padding-bottom: 2rem;
 }
@@ -521,23 +580,24 @@ img {
   filter: invert(99%) sepia(0%) saturate(734%) hue-rotate(360deg) brightness(116%) contrast(100%);
 }
 .education__icon--schools {
-  left: 45%;
+  left: 25%;
 }
 .education__icon--courses {
-  left: 55%;
+  left: 75%;
 }
 .education__text {
-  width: 20rem;
-  height: 20rem;
-  background: #fff;
+  width: 30rem;
+  height: 30rem;
   border-radius: 50%;
-  position: absolute;
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
   transition: all 0.2s;
   overflow: hidden;
+}
+.education__text--schools {
+  background: #fff;
 }
 .education__heading, .education__paragraph {
   opacity: 0;
@@ -546,6 +606,15 @@ img {
 }
 .education__heading {
   font-size: 0.1rem;
+  position: relative;
+}
+.education__heading span {
+  position: absolute;
+  top: 0.5rem;
+  left: 35rem;
+}
+.education__heading:first-child {
+  margin-top: 2rem;
 }
 .education__paragraph {
   font-size: 0.1rem;

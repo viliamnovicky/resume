@@ -120,5 +120,21 @@
     position: absolute;
     top: 2rem;
     right: 2rem;
+    background: $color-white;
+    border: 2px solid $color-secondary;
+
+    &:hover {
+
+      .btn__close--img {
+        width: 100%;
+      }
+    }
+
+    &--img {
+      transition: all .2s;
+      margin: auto;
+      width: 80%;
+      filter: invert(51%) sepia(86%) saturate(1893%) hue-rotate(332deg) brightness(101%) contrast(87%);
+    }
   }
 }
