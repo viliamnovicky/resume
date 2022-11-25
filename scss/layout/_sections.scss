@@ -3,6 +3,7 @@
     height: 68rem;
     margin: auto;
     margin: left;
+    position: relative;
 
     &__header {
         @include absolute-center-x;
@@ -41,6 +42,7 @@
     }
 
     &__work {
-        background: $color-secondary;
+        background: $color-light;
+        height: 90rem;
     }
 }

@@ -287,6 +287,7 @@ img {
   height: 68rem;
   margin: auto;
   margin: left;
+  position: relative;
 }
 .section__header {
   position: absolute;
@@ -325,18 +326,53 @@ img {
   height: 90rem;
 }
 .section__work {
-  background: #ee6c4d;
+  background: #effeff;
+  height: 90rem;
 }
 
 .wave {
   position: absolute;
   top: 100%;
-}
-.wave__1 {
-  z-index: 10;
-}
-.wave__2 {
   z-index: 9;
+}
+
+.header {
+  padding-top: 35rem;
+  overflow: hidden;
+}
+.header__heading, .header__heading--secondary {
+  text-transform: uppercase;
+  text-align: center;
+  color: #effeff;
+  animation: header 1s;
+}
+@media only screen and (max-width: 85.5em) {
+  .header__heading, .header__heading--secondary {
+    animation: header-ntb 1s;
+  }
+}
+.header__heading {
+  transition: all 0.5s;
+  letter-spacing: 0.2rem;
+  padding-left: 0.2rem;
+  font-weight: 200;
+}
+@media only screen and (max-width: 85.5em) {
+  .header__heading {
+    font-size: 6rem;
+  }
+}
+.header__heading--secondary {
+  letter-spacing: 4.3rem;
+  padding-left: 4.3rem;
+  font-weight: 100;
+}
+@media only screen and (max-width: 85.5em) {
+  .header__heading--secondary {
+    font-size: 4rem;
+    letter-spacing: 3.6rem;
+    padding-left: 3.6rem;
+  }
 }
 
 .address {
@@ -569,7 +605,6 @@ img {
   width: 12rem;
   height: 12rem;
   border: 1px solid #fff;
-  z-index: 10;
   position: absolute;
   position: absolute;
   left: 50%;
@@ -620,43 +655,9 @@ img {
   font-size: 0.1rem;
 }
 
-.header {
-  padding-top: 35rem;
-  overflow: hidden;
-}
-.header__heading, .header__heading--secondary {
-  text-transform: uppercase;
-  text-align: center;
-  color: #effeff;
-  animation: header 1s;
-}
-@media only screen and (max-width: 85.5em) {
-  .header__heading, .header__heading--secondary {
-    animation: header-ntb 1s;
-  }
-}
-.header__heading {
-  transition: all 0.5s;
-  letter-spacing: 0.2rem;
-  padding-left: 0.2rem;
-  font-weight: 200;
-}
-@media only screen and (max-width: 85.5em) {
-  .header__heading {
-    font-size: 6rem;
-  }
-}
-.header__heading--secondary {
-  letter-spacing: 4.3rem;
-  padding-left: 4.3rem;
-  font-weight: 100;
-}
-@media only screen and (max-width: 85.5em) {
-  .header__heading--secondary {
-    font-size: 4rem;
-    letter-spacing: 3.6rem;
-    padding-left: 3.6rem;
-  }
+.work__header {
+  color: #242424;
+  letter-spacing: 1rem;
 }
 
 /*# sourceMappingURL=style.comp.css.map */
