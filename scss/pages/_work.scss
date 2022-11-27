@@ -3,9 +3,9 @@
     grid-template-columns: repeat(4, 1fr);
     align-items: center;
     width: 100%;
-    height: 30vw;
+    height: 70rem;
     position: absolute;
-    top: 45rem;
+    bottom: 0;
     margin: auto;
     z-index: 11;
 
@@ -16,18 +16,78 @@
 
     &__cont {
         width: 100%;
-        height: 30vw;
+        height: 70rem;
         display: grid;
         justify-self: center;
         overflow: hidden;
         position: relative;
+
+        &:hover {
+
+            .work__img {
+                left: -20%;
+                width: 80rem;
+                opacity: 0;
+
+                &--1 {
+                    left: -40%;
+                }
+
+                &--3 {
+                    left: 10%;
+                }
+            }
+
+            .work__years {
+                font-size: $font-size-h3;
+                opacity: 1;
+                background: $color-primary;
+                color: $color-white;
+                top: 5rem;
+            }
+
+            .work__info {
+                width: 100%;
+                height: 100%;
+                opacity: 1;
+            }
+        }
+    }
+
+    &__years {
+        top: 0;
+        left: 2rem;
+        transition: all .2s;
+        text-align: left;
+        padding: 2rem 3rem;
+        color: $color-dark;
+        border-radius: 2rem;
+        display: block;
+        position: absolute;
+        z-index: 10;
+    }
+
+    &__info {
+        transition: all .2s;
+        position: absolute;
+        width: 5%;
+        height: 5%;
+        background: $color-white;
+        @include absolute-center-x;
+        top: 10rem;
+        border-radius: 2rem;
+        opacity: 0;
     }
 
     &__img {
         position: absolute;
+        transition: all .2s;
+        left: 0;
+        bottom: 0;
 
         &--1 {
             width: 30rem;
+            bottom: -12rem;
         }
 
         &--2 {

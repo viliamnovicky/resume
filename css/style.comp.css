@@ -56,7 +56,7 @@ h4 {
   font-size: 2rem;
 }
 
-h5 {
+h5, p {
   font-size: 1.6rem;
 }
 
@@ -327,7 +327,7 @@ img {
 }
 .section__work {
   background: #effeff;
-  height: 110rem;
+  height: 120rem;
 }
 .section__skills {
   background: #3d5a80;
@@ -340,7 +340,7 @@ img {
 }
 .wave__4 {
   z-index: 11;
-  top: -25rem;
+  top: -15rem;
 }
 
 .header {
@@ -667,9 +667,9 @@ img {
   grid-template-columns: repeat(4, 1fr);
   align-items: center;
   width: 100%;
-  height: 30vw;
+  height: 70rem;
   position: absolute;
-  top: 45rem;
+  bottom: 0;
   margin: auto;
   z-index: 11;
 }
@@ -679,17 +679,69 @@ img {
 }
 .work__cont {
   width: 100%;
-  height: 30vw;
+  height: 70rem;
   display: grid;
   justify-self: center;
   overflow: hidden;
   position: relative;
 }
+.work__cont:hover .work__img {
+  left: -20%;
+  width: 80rem;
+  opacity: 0;
+}
+.work__cont:hover .work__img--1 {
+  left: -40%;
+}
+.work__cont:hover .work__img--3 {
+  left: 10%;
+}
+.work__cont:hover .work__years {
+  font-size: 4rem;
+  opacity: 1;
+  background: #3d5a80;
+  color: #fff;
+  top: 5rem;
+}
+.work__cont:hover .work__info {
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+}
+.work__years {
+  top: 0;
+  left: 2rem;
+  transition: all 0.2s;
+  text-align: left;
+  padding: 2rem 3rem;
+  color: #242424;
+  border-radius: 2rem;
+  display: block;
+  position: absolute;
+  z-index: 10;
+}
+.work__info {
+  transition: all 0.2s;
+  position: absolute;
+  width: 5%;
+  height: 5%;
+  background: #fff;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 10rem;
+  border-radius: 2rem;
+  opacity: 0;
+}
 .work__img {
   position: absolute;
+  transition: all 0.2s;
+  left: 0;
+  bottom: 0;
 }
 .work__img--1 {
   width: 30rem;
+  bottom: -12rem;
 }
 .work__img--2 {
   width: 55rem;
