@@ -575,18 +575,17 @@ img {
 .education__cont:hover .education__text {
   border-radius: 2rem;
   background: #fff;
+  left: 5rem;
+  width: 70rem;
+  top: 55%;
 }
 .education__cont:hover .education__text--schools {
-  width: 30vw;
   height: 40rem;
-  left: 17vw;
-  top: 55%;
+  left: calc(50% - 36rem);
 }
 .education__cont:hover .education__text--courses {
-  width: 60vw;
   height: 40rem;
-  left: calc(100% - 32vw);
-  top: 55%;
+  left: calc(50% + 36rem);
 }
 .education__cont:hover .education__heading,
 .education__cont:hover .education__paragraph {
@@ -644,11 +643,11 @@ img {
 .education__heading, .education__paragraph {
   opacity: 0;
   visibility: hidden;
-  padding-left: 3rem;
 }
 .education__heading {
   font-size: 0.1rem;
   position: relative;
+  padding-left: 3rem;
 }
 .education__heading span {
   position: absolute;
@@ -657,6 +656,10 @@ img {
 }
 .education__heading:first-child {
   margin-top: 2rem;
+}
+.education__heading .education__paragraph {
+  text-transform: none;
+  font-weight: 400;
 }
 .education__paragraph {
   font-size: 0.1rem;
@@ -707,6 +710,7 @@ img {
   width: 100%;
   height: 100%;
   opacity: 1;
+  border: 0.5rem solid #ee6c4d;
 }
 .work__years {
   top: 0;
@@ -719,6 +723,8 @@ img {
   display: block;
   position: absolute;
   z-index: 10;
+  background: #fff;
+  border: 2px solid #3d5a80;
 }
 .work__info {
   transition: all 0.2s;
@@ -750,6 +756,17 @@ img {
 }
 .work__img--3 {
   width: 40rem;
+}
+.work__name {
+  padding: 10rem 0 0.5rem 5rem;
+  text-align: left;
+}
+.work__place {
+  padding-left: 4rem;
+}
+.work__description {
+  text-align: justify;
+  padding: 2rem;
 }
 
 /*# sourceMappingURL=style.comp.css.map */

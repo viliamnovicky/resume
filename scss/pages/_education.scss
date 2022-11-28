@@ -32,19 +32,18 @@
             .education__text {
                 border-radius: 2rem;
                 background: $color-white;
+                left: 5rem;
+                width: 70rem;
+                top: 55%;
 
                 &--schools {
-                    width: 30vw;
                     height: 40rem;
-                    left: 17vw;
-                    top: 55%;
+                    left: calc(50% - 36rem);
                 }
 
                 &--courses {
-                    width: 60vw;
                     height: 40rem;
-                    left: calc(100% - 32vw);
-                    top: 55%;
+                    left: calc(50% + 36rem);
                 }
             }
 
@@ -63,6 +62,7 @@
                 font-size: $font-size-h5;
                 padding-bottom: 2rem;
             }
+
         }
     }
 
@@ -111,12 +111,12 @@
     &__paragraph {
         opacity: 0;
         visibility: hidden;
-        padding-left: 3rem;
     }
 
     &__heading {
         font-size: .1rem;
         position: relative;
+        padding-left: 3rem;
 
         span {
             position: absolute;
@@ -126,6 +126,11 @@
         
         &:first-child {
             margin-top: 2rem;
+        }
+
+        .education__paragraph {
+            text-transform: none;
+            font-weight: 400;
         }
     }
 
