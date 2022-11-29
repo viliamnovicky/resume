@@ -44,6 +44,11 @@
     &__work {
         background: $color-light;
         height: 120rem;
+        position: relative;
+
+        @include respond(ntb) {
+            height: 280rem;
+        }
     }
 
     &__skills {
