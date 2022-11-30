@@ -3,15 +3,14 @@
     &__cont {
         width: 100%;
         height: 100%;
-        position: absolute;
-        padding: 0 80rem;
         top: 15rem;
         @include absolute-center-x;
-        justify-content: space-evenly;
         transition: all .2s;
 
+        @include respond(ntb) {
+        }
+
         &:hover {
-            padding: 0 10rem;
 
             .education__icon {
                 background: $color-secondary;
@@ -35,15 +34,30 @@
                 left: 5rem;
                 width: 70rem;
                 top: 55%;
+                height: 40rem;
 
                 &--schools {
-                    height: 40rem;
                     left: calc(50% - 36rem);
                 }
 
                 &--courses {
-                    height: 40rem;
                     left: calc(50% + 36rem);
+                }
+
+                @include respond(ntb) {
+                    border-radius: 2rem;
+                    width: 95%;
+                    height: 40rem;
+                    left: 50%;
+                    background: $color-white;
+        
+                    &--schools {
+                        top: 50rem;
+                    }
+        
+                    &--courses {
+                        top: 92rem;
+                    }
                 }
             }
 
@@ -81,16 +95,29 @@
         position: absolute;
         @include absolute-center;
 
+        @include respond(ntb) {
+            left: calc(100% - 8rem);
+            top: 8rem;
+        }
+
         .img__icon {
-            filter: invert(99%) sepia(0%) saturate(734%) hue-rotate(360deg) brightness(116%) contrast(100%);
+            filter: $color-filter-white
         }
 
         &--schools {
             left: 25%;
+
+            @include respond(ntb) {
+                left: calc(100% - 8rem);
+            }
         }
 
         &--courses {
             left: 75%;
+
+            @include respond(ntb) {
+                left: calc(100% - 8rem);
+            }
         }
     }
 
@@ -102,6 +129,22 @@
         transition: all .2s;
         overflow: hidden;
 
+        @include respond(ntb) {
+            border-radius: 2rem;
+            width: 95%;
+            height: 40rem;
+            left: 50%;
+            background: $color-white;
+
+            &--schools {
+                top: 50rem;
+            }
+
+            &--courses {
+                top: 92rem;
+            }
+        }
+
         &--schools {
             background: $color-white;
         }
@@ -111,12 +154,23 @@
     &__paragraph {
         opacity: 0;
         visibility: hidden;
+
+        @include respond(ntb) {
+            opacity: 1;
+            visibility: visible;
+            padding-bottom: .5rem;
+        }
     }
 
     &__heading {
         font-size: .1rem;
         position: relative;
         padding-left: 3rem;
+
+        @include respond(ntb) {
+            font-size: $font-size-h3;
+            padding-bottom: 2rem;
+        }
 
         span {
             position: absolute;
@@ -131,6 +185,10 @@
         .education__paragraph {
             text-transform: none;
             font-weight: 400;
+
+            @include respond(ntb) {
+                font-size: $font-size-h5;
+            }
         }
     }
 

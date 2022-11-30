@@ -39,6 +39,10 @@
         background: $color-secondary;
         position: relative;
         height: 90rem;
+
+        @include respond(ntb) {
+            height: 135rem;
+        }
     }
 
     &__work {

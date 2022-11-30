@@ -37,8 +37,7 @@
         height: 100%;
         position: absolute;
         @include absolute-center;
-        filter: invert(100%) sepia(1%) saturate(449%) hue-rotate(42deg)
-          brightness(117%) contrast(100%);
+        filter: $color-filter-white;
         z-index: -1;
       }
     }
@@ -134,7 +133,7 @@
       transition: all .2s;
       margin: auto;
       width: 80%;
-      filter: invert(51%) sepia(86%) saturate(1893%) hue-rotate(332deg) brightness(101%) contrast(87%);
+      filter: $color-filter-secondary;
     }
   }
 }

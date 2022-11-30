@@ -8,6 +8,16 @@ $color-light-2: #98c1d9;
 $color-white: #fff;
 $color-dark: #242424;
 
+// SVG Color Filters
+$color-filter-primary: invert(31%) sepia(28%) saturate(776%) hue-rotate(174deg) brightness(99%) contrast(91%);
+$color-filter-secondary: invert(51%) sepia(86%) saturate(1893%) hue-rotate(332deg) brightness(101%) contrast(87%);
+
+$color-filter-light: invert(100%) sepia(19%) saturate(4482%) hue-rotate(175deg) brightness(105%) contrast(102%);
+$color-filter-light-2: invert(88%) sepia(3%) saturate(4120%) hue-rotate(173deg) brightness(82%) contrast(111%);
+
+$color-filter-white: invert(100%);    
+$color-filter-dark: invert(10%) sepia(12%) saturate(0%) hue-rotate(237deg) brightness(105%) contrast(92%);
+
 // Font sizes
 $font-size-h1: 8rem;
 $font-size-h2: 6rem;
