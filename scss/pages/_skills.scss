@@ -1,0 +1,7 @@
+.skills {
+
+    &__header {
+        @include absolute-center-x;
+        top: 10rem;
+    }
+}

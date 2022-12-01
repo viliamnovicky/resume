@@ -298,6 +298,7 @@ img {
   text-transform: uppercase;
   top: 25rem;
   width: 100vw;
+  z-index: 20;
 }
 @media only screen and (max-width: 85.5em) {
   .section__header {
@@ -914,6 +915,13 @@ img {
 .work__description {
   text-align: justify;
   padding: 2rem;
+}
+
+.skills__header {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 10rem;
 }
 
 /*# sourceMappingURL=style.comp.css.map */

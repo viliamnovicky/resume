@@ -13,6 +13,7 @@
         text-transform: uppercase;
         top: 25rem;
         width: 100vw;
+        z-index: 20;
 
         @include respond(ntb) {
             font-size: $font-size-h3;
