@@ -1,6 +1,7 @@
 .program {
     &__cont {
         width: 80%;
+        height: 20rem;
         display: grid;
         grid-template-columns: repeat(5, 1fr);
         grid-gap: 10rem;

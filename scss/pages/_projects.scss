@@ -1,0 +1,27 @@
+.projects {
+    &__cont {
+        padding-top: 60rem;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+
+    }
+
+    &__project {
+        display: grid;
+        justify-self: center;
+        border-radius: 1rem;
+
+        img {
+            width: 80%;
+            margin: auto;
+            padding: 2rem;
+            background: $color-white;
+            border-radius: 1rem;
+        }
+    }
+
+    &__header {
+        margin-top: 15rem;
+        color: $color-white;
+    }
+}

@@ -357,6 +357,10 @@ img {
 }
 .section__program-skills {
   background: #effeff;
+  height: 95rem;
+}
+.section__projects {
+  background: #ee6c4d;
   height: 100rem;
 }
 
@@ -368,6 +372,9 @@ img {
 .wave__4 {
   z-index: 11;
   top: -15rem;
+}
+.wave__6 {
+  top: 0;
 }
 
 .header {
@@ -1013,6 +1020,7 @@ img {
 
 .program__cont {
   width: 80%;
+  height: 20rem;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   grid-gap: 10rem;
@@ -1026,6 +1034,28 @@ img {
   display: grid;
   align-self: center;
   justify-self: center;
+}
+
+.projects__cont {
+  padding-top: 60rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+.projects__project {
+  display: grid;
+  justify-self: center;
+  border-radius: 1rem;
+}
+.projects__project img {
+  width: 80%;
+  margin: auto;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 1rem;
+}
+.projects__header {
+  margin-top: 15rem;
+  color: #fff;
 }
 
 /*# sourceMappingURL=style.comp.css.map */

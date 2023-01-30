@@ -63,6 +63,11 @@
 
     &__program-skills {
         background: $color-light;
+        height: 95rem;
+    }
+
+    &__projects {
+        background: $color-secondary;
         height: 100rem;
     }
 }
