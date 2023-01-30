@@ -58,5 +58,11 @@
 
     &__skills {
         background: $color-primary;
+        height: 85rem;
+    }
+
+    &__program-skills {
+        background: $color-light;
+        height: 100rem;
     }
 }
