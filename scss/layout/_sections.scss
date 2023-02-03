@@ -18,6 +18,10 @@
         @include respond(ntb) {
             font-size: $font-size-h3;
         }
+
+        @include respond(phone) {
+            font-size: 3rem;
+        }
     }
 
     &__intro {
@@ -48,7 +52,7 @@
 
     &__work {
         background: $color-light;
-        height: 120rem;
+        height: 145rem;
         position: relative;
 
         @include respond(ntb) {
@@ -59,6 +63,14 @@
     &__skills {
         background: $color-primary;
         height: 85rem;
+
+        @include respond(tab-land) {
+            height: 120rem;
+        }
+
+        @include respond(tab-port) {
+            height: 200rem;
+        }
     }
 
     &__program-skills {

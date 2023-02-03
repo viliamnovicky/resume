@@ -316,6 +316,11 @@ img {
     font-size: 4rem;
   }
 }
+@media only screen and (max-width: 37.5em) {
+  .section__header {
+    font-size: 3rem;
+  }
+}
 .section__intro {
   background: #3d5a80;
   margin-top: 2rem;
@@ -343,7 +348,7 @@ img {
 }
 .section__work {
   background: #effeff;
-  height: 120rem;
+  height: 145rem;
   position: relative;
 }
 @media only screen and (max-width: 85.5em) {
@@ -354,6 +359,16 @@ img {
 .section__skills {
   background: #3d5a80;
   height: 85rem;
+}
+@media only screen and (max-width: 78em) {
+  .section__skills {
+    height: 120rem;
+  }
+}
+@media only screen and (max-width: 62.5em) {
+  .section__skills {
+    height: 200rem;
+  }
 }
 .section__program-skills {
   background: #effeff;
@@ -372,6 +387,16 @@ img {
 .wave__4 {
   z-index: 11;
   top: -15rem;
+}
+@media only screen and (max-width: 62.5em) {
+  .wave__4 {
+    top: -7rem;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .wave__4 {
+    top: -5rem;
+  }
 }
 .wave__6 {
   top: 0;
@@ -873,7 +898,6 @@ img {
   transition: all 0.2s;
   position: absolute;
   width: 5%;
-  height: 5%;
   background: #fff;
   position: absolute;
   left: 50%;
@@ -945,6 +969,24 @@ img {
   height: 85rem;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  padding-top: 30rem;
+}
+@media only screen and (max-width: 78em) {
+  .skills {
+    grid-template-columns: repeat(2, 1fr);
+    height: 120rem;
+    padding-top: 15rem;
+  }
+}
+@media only screen and (max-width: 62.5em) {
+  .skills {
+    grid-template-columns: 1fr;
+    height: 200rem;
+    padding-top: 15rem;
+  }
+}
+.skills__cont {
+  height: 100%;
 }
 .skills__header {
   position: absolute;
@@ -952,6 +994,16 @@ img {
   transform: translateX(-50%);
   top: 10rem;
   color: #fff;
+}
+@media only screen and (max-width: 78em) {
+  .skills__header {
+    top: 4rem;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .skills__header {
+    width: 90%;
+  }
 }
 .skills__skill {
   position: relative;
@@ -961,8 +1013,27 @@ img {
   transition: all 0.2s;
   overflow: hidden;
 }
-.skills__skill:nth-child(1) {
-  margin-top: 2rem;
+@media only screen and (max-width: 78em) {
+  .skills__skill .hidden {
+    visibility: visible !important;
+    text-align: right;
+    opacity: 1;
+    color: #242424;
+    right: 0;
+    left: auto;
+    transform: translate(0, -50%);
+    padding-left: 0;
+    padding-right: 1rem;
+    width: 50%;
+  }
+}
+@media only screen and (max-width: 78em) {
+  .skills__skill {
+    background: linear-gradient(75deg, #ee6c4d 0%, #ee6c4d 40%, #fff 30%);
+    margin-bottom: 1rem;
+    border-radius: 1rem;
+    border: 2px solid #fff;
+  }
 }
 .skills__skill:hover {
   background: #fff;
@@ -979,17 +1050,6 @@ img {
   border: solid 10px white;
   outline: 1px solid #3d5a80;
 }
-.skills__skill:hover .img__icon--lang::after {
-  content: "ssdafsdfsdfsdfsdd";
-  background: white;
-  width: 7vw;
-  height: 7vw;
-  display: inline-block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 5;
-}
 .skills__skill:hover .img__icon--lang-r {
   left: -12.5%;
 }
@@ -999,12 +1059,26 @@ img {
   color: #242424;
 }
 .skills__skill--header {
-  padding-top: 30rem;
   font-weight: 100;
   text-align: center;
   color: #fff;
   text-transform: uppercase;
   margin-bottom: 5rem;
+}
+@media only screen and (max-width: 85.5em) {
+  .skills__skill--header {
+    font-size: 3rem;
+  }
+}
+@media only screen and (max-width: 62.5em) {
+  .skills__skill--header {
+    margin-bottom: 2rem;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .skills__skill--header {
+    font-size: 2.5rem;
+  }
 }
 .skills__skill--text {
   color: #fff;
@@ -1016,6 +1090,25 @@ img {
   transform: translate(-50%, -50%);
   width: 100%;
   text-align: center;
+}
+@media only screen and (max-width: 85.5em) {
+  .skills__skill--text {
+    font-size: 2rem;
+  }
+}
+@media only screen and (max-width: 78em) {
+  .skills__skill--text {
+    width: 35%;
+    text-align: left;
+    left: 0;
+    transform: translate(0, -50%);
+    padding-left: 1rem;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .skills__skill--text {
+    font-size: 1.5rem;
+  }
 }
 
 .program__cont {
