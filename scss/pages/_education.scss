@@ -1,198 +1,265 @@
 .education {
+  &__cont {
+    width: 100%;
+    height: 100%;
+    top: 15rem;
+    @include absolute-center-x;
+    transition: all 0.2s;
 
-    &__cont {
-        width: 100%;
-        height: 100%;
-        top: 15rem;
-        @include absolute-center-x;
-        transition: all .2s;
-
-        @include respond(ntb) {
-        }
-
-        &:hover {
-
-            .education__icon {
-                background: $color-secondary;
-                transform: translateX( 0%);
-
-                &--schools {
-                    left: calc(100% - 14rem);
-                    top: 2rem;
-                }
-
-                &--courses {
-                    left: calc(100% - 14rem);
-                    top: 2rem;
-                }
-
-            }
-
-            .education__text {
-                border-radius: 2rem;
-                background: $color-white;
-                left: 5rem;
-                width: 70rem;
-                top: 55%;
-                height: 40rem;
-
-                &--schools {
-                    left: calc(50% - 36rem);
-                }
-
-                &--courses {
-                    left: calc(50% + 36rem);
-                }
-
-                @include respond(ntb) {
-                    border-radius: 2rem;
-                    width: 95%;
-                    height: 40rem;
-                    left: 50%;
-                    background: $color-white;
-        
-                    &--schools {
-                        top: 50rem;
-                    }
-        
-                    &--courses {
-                        top: 92rem;
-                    }
-                }
-            }
-
-            .education__heading,
-            .education__paragraph {
-                opacity: 1;
-                visibility: visible;
-            }
-
-            .education__heading {
-                font-size: $font-size-h3;
-                padding-bottom: .5rem;
-            }
-
-            .education__paragraph {
-                font-size: $font-size-h5;
-                padding-bottom: 2rem;
-            }
-
-        }
+    @include respond(ntb) {
     }
 
-    &__header {
-        color: $color-white;
-        letter-spacing: 1rem;
-        top: 30rem;
-    }
-
-    &__icon {
+    &:hover {
+      .education__icon {
         background: $color-secondary;
-        transition: all .2s;
-        width: 12rem;
-        height: 12rem;
-        border: 1px solid $color-white;
-        position: absolute;
-        @include absolute-center;
-
-        @include respond(ntb) {
-            left: calc(100% - 8rem);
-            top: 8rem;
-        }
-
-        .img__icon {
-            filter: $color-filter-white
-        }
+        transform: translateX(0%);
 
         &--schools {
-            left: 25%;
+          left: calc(100% - 14rem);
+          top: 2rem;
 
-            @include respond(ntb) {
-                left: calc(100% - 8rem);
-            }
+          @include respond(ntb) {
+            left: calc(100% - 8rem);
+            top: 8rem;
+          }
+
+          @include respond(tab-land) {
+            left: calc(100% - 6rem);
+            top: 6rem;
+          }
+
+          @include respond(phone) {
+            left: calc(100% - 4rem);
+            top: 4rem;
+          }
         }
 
         &--courses {
-            left: 75%;
+          left: calc(100% - 14rem);
+          top: 2rem;
 
-            @include respond(ntb) {
-                left: calc(100% - 8rem);
-            }
+          @include respond(ntb) {
+            left: calc(100% - 8rem);
+            top: 8rem;
+          }
+
+          @include respond(tab-land) {
+            left: calc(100% - 6rem);
+            top: 6rem;
+          }
+
+          @include respond(phone) {
+            left: calc(100% - 4rem);
+            top: 4rem;
+          }
         }
-    }
+      }
 
-    &__text {
-        width: 30rem;
-        height: 30rem;
-        border-radius: 50%;
-        @include absolute-center;
-        transition: all .2s;
-        overflow: hidden;
-
-        @include respond(ntb) {
-            border-radius: 2rem;
-            width: 95%;
-            height: 40rem;
-            left: 50%;
-            background: $color-white;
-
-            &--schools {
-                top: 50rem;
-            }
-
-            &--courses {
-                top: 92rem;
-            }
-        }
+      .education__text {
+        border-radius: 2rem;
+        background: $color-white;
+        left: 5rem;
+        width: 70rem;
+        top: 55%;
+        height: 40rem;
 
         &--schools {
-            background: $color-white;
+          left: calc(50% - 36rem);
         }
-    }
 
-    &__heading,
-    &__paragraph {
-        opacity: 0;
-        visibility: hidden;
+        &--courses {
+          left: calc(50% + 36rem);
+        }
 
         @include respond(ntb) {
-            opacity: 1;
-            visibility: visible;
-            padding-bottom: .5rem;
+          border-radius: 2rem;
+          width: 95%;
+          height: 40rem;
+          left: 50%;
+          background: $color-white;
+
+          &--schools {
+            top: 50rem;
+          }
+
+          &--courses {
+            top: 92rem;
+          }
         }
+      }
+
+      .education__heading,
+      .education__paragraph {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .education__heading {
+        font-size: $font-size-h3;
+        padding-bottom: 0.5rem;
+
+        @include respond(phone) {
+            font-size: 2.5rem;
+          }
+      }
+
+      .education__paragraph {
+        font-size: $font-size-h5;
+        padding-bottom: 2rem;
+      }
+    }
+  }
+
+  &__header {
+    color: $color-white;
+    letter-spacing: 1rem;
+    top: 30rem;
+  }
+
+  &__icon {
+    background: $color-secondary;
+    transition: all 0.2s;
+    width: 12rem;
+    height: 12rem;
+    border: 1px solid $color-white;
+    position: absolute;
+    @include absolute-center;
+
+    @include respond(ntb) {
+      left: calc(100% - 8rem);
+      top: 8rem;
     }
 
-    &__heading {
-        font-size: .1rem;
-        position: relative;
-        padding-left: 3rem;
-
-        @include respond(ntb) {
-            font-size: $font-size-h3;
-            padding-bottom: 2rem;
-        }
-
-        span {
-            position: absolute;
-            top: .5rem;
-            left: 35rem;
-        }
-        
-        &:first-child {
-            margin-top: 2rem;
-        }
-
-        .education__paragraph {
-            text-transform: none;
-            font-weight: 400;
-
-            @include respond(ntb) {
-                font-size: $font-size-h5;
-            }
-        }
+    @include respond(tab-land) {
+      width: 10rem;
+      height: 10rem;
     }
 
-    &__paragraph {
-        font-size: .1rem;
+    @include respond(phone) {
+      width: 7rem;
+      height: 7rem;
     }
+
+    .img__icon {
+      filter: $color-filter-white;
+    }
+
+    &--schools {
+      left: 25%;
+
+      @include respond(ntb) {
+        left: calc(100% - 8rem);
+        top: 8rem;
+      }
+
+      @include respond(tab-port) {
+        left: calc(100% - 6rem);
+        top: 6rem;
+      }
+
+      @include respond(phone) {
+        left: calc(100% - 4rem);
+        top: 4rem;
+      }
+    }
+
+    &--courses {
+      left: 75%;
+
+      @include respond(ntb) {
+        left: calc(100% - 8rem);
+        top: 8rem;
+      }
+
+      @include respond(tab-port) {
+        left: calc(100% - 6rem);
+        top: 6rem;
+      }
+
+      @include respond(phone) {
+        left: calc(100% - 4rem);
+        top: 4rem;
+      }
+    }
+  }
+
+  &__text {
+    width: 30rem;
+    height: 30rem;
+    border-radius: 50%;
+    @include absolute-center;
+    transition: all 0.2s;
+    overflow: hidden;
+
+    @include respond(ntb) {
+      border-radius: 2rem;
+      width: 95%;
+      height: 40rem;
+      left: 50%;
+      background: $color-white;
+
+      &--schools {
+        top: 50rem;
+      }
+
+      &--courses {
+        top: 92rem;
+      }
+    }
+
+    &--schools {
+      background: $color-white;
+    }
+  }
+
+  &__heading,
+  &__paragraph {
+    opacity: 0;
+    visibility: hidden;
+
+    @include respond(ntb) {
+      opacity: 1;
+      visibility: visible;
+      padding-bottom: 0.5rem;
+    }
+  }
+
+  &__heading {
+    font-size: 0.1rem;
+    position: relative;
+    padding-left: 3rem;
+
+    @include respond(ntb) {
+      font-size: $font-size-h3;
+      padding-bottom: 2rem;
+    }
+
+    @include respond(phone) {
+      font-size: 2.5rem;
+      padding-bottom: 2rem;
+    }
+
+    span {
+      position: absolute;
+      top: 0.5rem;
+      left: 35rem;
+    }
+
+    &:first-child {
+      margin-top: 2rem;
+    }
+
+    .education__paragraph {
+      text-transform: none;
+      font-weight: 400;
+
+      @include respond(ntb) {
+        font-size: $font-size-h5;
+      }
+    }
+  }
+
+  &__paragraph {
+    font-size: 0.1rem;
+  }
 }

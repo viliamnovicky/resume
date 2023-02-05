@@ -8,7 +8,7 @@
   box-shadow: 0.5rem 0.5rem 2rem rgba($color-dark, 0.2);
   cursor: pointer;
   font-size: $font-size-h5;
-  transition: all .2s;
+  transition: all 0.2s;
   text-align: center;
   display: grid;
   align-items: center;
@@ -30,15 +30,32 @@
         color: white;
         box-shadow: 0.5rem 0.5rem 2rem rgba($color-dark, 0.2);
       }
+
+      @include respond(phone) {
+        height: 3rem;
+        font-size: 1.6rem;
+        box-shadow: 0.5rem 0.5rem 2rem rgba($color-dark, 0.2);
+    }
     }
 
     &--img {
       img {
         height: 100%;
-        position: absolute;
         @include absolute-center;
         filter: $color-filter-white;
         z-index: -1;
+      }
+
+      @include respond(phone) {
+        height: 3rem;
+        font-size: 1.6rem;
+        box-shadow: 0.5rem 0.5rem 2rem rgba($color-dark, 0.2);
+        left: -20%;
+      }
+
+      @include respond(mini-phone) {
+        left: -45%;
+        top: -.5rem;
       }
     }
   }
@@ -57,16 +74,16 @@
     }
 
     &--light {
-        &:hover {
-            color: $color-white;
-        }
+      &:hover {
+        color: $color-white;
+      }
     }
 
     &--img {
-        &:hover {
-            color: transparent;
-            border: 2px solid transparent;
-        }
+      &:hover {
+        color: transparent;
+        border: 2px solid transparent;
+      }
     }
   }
 
@@ -84,31 +101,42 @@
   }
 
   &__fb {
- 
     &:hover {
-        background: #4267B2
+      background: #4267b2;
     }
   }
 
   &__ig {
-    background: radial-gradient(circle, rgba(254,218,117,0) 0%, rgba(250,126,30,0) 20%, rgba(214,41,118,0) 40%, rgba(150,47,191,0) 60%, rgba(79,91,213,0) 80%);
-    
+    background: radial-gradient(
+      circle,
+      rgba(254, 218, 117, 0) 0%,
+      rgba(250, 126, 30, 0) 20%,
+      rgba(214, 41, 118, 0) 40%,
+      rgba(150, 47, 191, 0) 60%,
+      rgba(79, 91, 213, 0) 80%
+    );
+
     &:hover {
-        background: radial-gradient(circle, rgba(254,218,117,1) 0%, rgba(250,126,30,1) 20%, rgba(214,41,118,1) 40%, rgba(150,47,191,1) 60%, rgba(79,91,213,1) 80%);
+      background: radial-gradient(
+        circle,
+        rgba(254, 218, 117, 1) 0%,
+        rgba(250, 126, 30, 1) 20%,
+        rgba(214, 41, 118, 1) 40%,
+        rgba(150, 47, 191, 1) 60%,
+        rgba(79, 91, 213, 1) 80%
+      );
     }
   }
 
   &__github {
- 
     &:hover {
-        background: #24292f
+      background: #24292f;
     }
   }
 
   &__linkedin {
- 
     &:hover {
-        background: #0a66c2
+      background: #0a66c2;
     }
   }
 
@@ -123,14 +151,13 @@
     border: 2px solid $color-secondary;
 
     &:hover {
-
       .btn__close--img {
         width: 100%;
       }
     }
 
     &--img {
-      transition: all .2s;
+      transition: all 0.2s;
       margin: auto;
       width: 80%;
       filter: $color-filter-secondary;
