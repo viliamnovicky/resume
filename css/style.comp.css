@@ -307,10 +307,12 @@ img {
 
 .section {
   width: calc(100vw - 6rem);
-  height: 68rem;
+  display: flex;
+  flex-direction: row;
   margin: auto;
   margin: left;
   position: relative;
+  justify-content: center;
 }
 .section__header {
   position: absolute;
@@ -337,10 +339,8 @@ img {
 .section__intro {
   background: #3d5a80;
   margin-top: 2rem;
-  position: relative;
 }
 .section__address {
-  position: relative;
   background: #effeff;
   height: 80rem;
 }
@@ -351,7 +351,6 @@ img {
 }
 .section__education {
   background: #ee6c4d;
-  position: relative;
   height: 90rem;
 }
 @media only screen and (max-width: 85.5em) {
@@ -362,7 +361,6 @@ img {
 .section__work {
   background: #effeff;
   height: 145rem;
-  position: relative;
 }
 @media only screen and (max-width: 85.5em) {
   .section__work {
@@ -1277,6 +1275,8 @@ img {
   display: grid;
   justify-self: center;
   border-radius: 1rem;
+  margin: auto;
+  align-items: center;
 }
 .projects__project img {
   width: 80%;
@@ -1284,6 +1284,10 @@ img {
   padding: 2rem;
   background: #fff;
   border-radius: 1rem;
+}
+.projects__link {
+  display: flex;
+  justify-content: center;
 }
 .projects__header {
   margin-top: 15rem;

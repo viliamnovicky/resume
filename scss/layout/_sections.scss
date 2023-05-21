@@ -1,9 +1,11 @@
 .section {
     width: calc(100vw - 6rem);
-    height: 68rem;
+    display: flex;
+    flex-direction: row;
     margin: auto;
     margin: left;
     position: relative;
+    justify-content: center;
 
     &__header {
         @include absolute-center-x;
@@ -27,11 +29,9 @@
     &__intro {
         background: $color-primary;
         margin-top: 2rem;
-        position: relative;
     }
 
     &__address {
-        position: relative;
         background: $color-light;
         height: 80rem;
 
@@ -42,7 +42,6 @@
 
     &__education {
         background: $color-secondary;
-        position: relative;
         height: 90rem;
 
         @include respond(ntb) {
@@ -53,7 +52,6 @@
     &__work {
         background: $color-light;
         height: 145rem;
-        position: relative;
 
         @include respond(ntb) {
             height: 280rem;
