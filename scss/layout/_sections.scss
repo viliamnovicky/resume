@@ -13,14 +13,26 @@
 
     &__address {
         background: $color-light;
-        height: 70rem;
+        height: 75rem;
         padding-top: 5rem;
+        margin-top: -5rem;
+
+        @include respond(tab-land) {
+            height: 180rem;
+            margin-top: -10rem;
+            justify-content: space-evenly;
+        }
     }
 
     &__education {
         background: $color-secondary;
         height: 80rem;
-        margin-top: -1rem
+        margin-top: -1rem;
+
+        @include respond(tab-land) {
+            height: 120rem;
+            justify-content: center;
+        }
     }
 
     &__program-skills {

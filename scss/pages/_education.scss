@@ -14,13 +14,8 @@
         left: calc(100% - 14rem);
         top: 2rem;
 
-        @include respond(ntb) {
-          left: calc(100% - 8rem);
-          top: 8rem;
-        }
-
         @include respond(tab-land) {
-          left: calc(100% - 6rem);
+          left: calc(100% - 8rem);
           top: 6rem;
         }
 
@@ -34,14 +29,9 @@
         left: calc(100% - 14rem);
         top: 2rem;
 
-        @include respond(ntb) {
+        @include respond(tab-land) {
           left: calc(100% - 8rem);
           top: 8rem;
-        }
-
-        @include respond(tab-land) {
-          left: calc(100% - 6rem);
-          top: 6rem;
         }
 
         @include respond(phone) {
@@ -67,19 +57,19 @@
         left: calc(50% + 36rem);
       }
 
-      @include respond(ntb) {
+      @include respond(tab-land) {
         border-radius: 2rem;
         width: 95%;
-        height: 40rem;
+        height: 50rem;
         left: 50%;
         background: $color-white;
 
         &--schools {
-          top: 50rem;
+          top: 30rem;
         }
 
         &--courses {
-          top: 92rem;
+          top: 35rem;
         }
       }
     }
@@ -114,12 +104,9 @@
     position: absolute;
     @include absolute-center;
 
-    @include respond(ntb) {
+    @include respond(tab-land) {
       left: calc(100% - 8rem);
       top: 8rem;
-    }
-
-    @include respond(tab-land) {
       width: 10rem;
       height: 10rem;
     }
@@ -136,14 +123,9 @@
     &--schools {
       left: 25%;
 
-      @include respond(ntb) {
+      @include respond(tab-land) {
         left: calc(100% - 8rem);
         top: 8rem;
-      }
-
-      @include respond(tab-port) {
-        left: calc(100% - 6rem);
-        top: 6rem;
       }
 
       @include respond(phone) {
@@ -155,14 +137,9 @@
     &--courses {
       left: 75%;
 
-      @include respond(ntb) {
+      @include respond(tab-land) {
         left: calc(100% - 8rem);
         top: 8rem;
-      }
-
-      @include respond(tab-port) {
-        left: calc(100% - 6rem);
-        top: 6rem;
       }
 
       @include respond(phone) {
@@ -180,19 +157,20 @@
     transition: all 0.2s;
     overflow: hidden;
 
-    @include respond(ntb) {
+    @include respond(tab-land) {
       border-radius: 2rem;
       width: 95%;
-      height: 40rem;
+      height: 50rem;
       left: 50%;
       background: $color-white;
+      position: relative;
 
       &--schools {
-        top: 50rem;
+        top: 30rem;
       }
 
       &--courses {
-        top: 92rem;
+        top: 35rem;
       }
     }
 
@@ -206,7 +184,7 @@
     opacity: 0;
     visibility: hidden;
 
-    @include respond(ntb) {
+    @include respond(tab-land) {
       opacity: 1;
       visibility: visible;
       padding-bottom: 0.5rem;
