@@ -2,19 +2,21 @@
     padding-top: 35rem;
     overflow: hidden;
 
-    &__heading,
-    &__heading--secondary {
+    &__h1,
+    &__h2 {
         text-transform: uppercase;
         text-align: center;
         color: $color-light;
-        animation: header 1s;
+        animation: header-pc 1s;
+        width: 100%;
+
 
         @include respond(ntb) {
             animation: header-ntb 1s;
         }
     }
 
-    &__heading {
+    &__h1 {
         transition: all .5s;
         letter-spacing: .2rem;
         padding-left: .2rem;
@@ -23,17 +25,17 @@
         @include respond(ntb) {
             font-size: $font-size-h2;
         }
+    }
 
-        &--secondary {
-            letter-spacing:4.3rem;
-            padding-left: 4.3rem;
-            font-weight: 100;
+    &__h2 {
+        letter-spacing:4.3rem;
+        padding-left: 4.3rem;
+        font-weight: 100;
 
-            @include respond(ntb) {
-                font-size: $font-size-h3;
-                letter-spacing:3.6rem;
-                padding-left: 3.6rem;
-            }
+        @include respond(ntb) {
+            font-size: $font-size-h3;
+            letter-spacing:3.6rem;
+            padding-left: 3.6rem;
         }
     }
 }

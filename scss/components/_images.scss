@@ -35,6 +35,10 @@
             filter: none;
             width: 13rem;
             position: relative;
+
+            @include respond(ntb) {
+                width: 8rem;
+              }
         }
     }
 }

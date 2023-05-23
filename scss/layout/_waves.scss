@@ -1,22 +1,9 @@
 .wave {
-    position: absolute;
-    top: 100%;
-    z-index: 9;
+  width: 100%;
 
-    &__4 {
-        z-index: 11;
-        top: -15rem;
-
-        @include respond(tab-port) {
-            top: -7rem;
-          }
-
-          @include respond(phone) {
-            top: -5rem;
-          }
-    }
-
-    &__6 {
-        top: 0;
-    }
+  &__cont {
+    position: relative;
+    width: 100%;
+    height: 22rem;
+  }
 }

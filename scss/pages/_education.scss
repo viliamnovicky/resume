@@ -1,119 +1,108 @@
 .education {
-  &__cont {
-    width: 100%;
-    height: 100%;
-    top: 15rem;
-    @include absolute-center-x;
-    transition: all 0.2s;
+  width: 100%;
+  height: 100%;
+  transition: all 0.2s;
 
-    @include respond(ntb) {
-    }
+  @include respond(ntb) {}
 
-    &:hover {
-      .education__icon {
-        background: $color-secondary;
-        transform: translateX(0%);
+  &:hover {
+    .education__icon {
+      background: $color-secondary;
+      transform: translateX(0%);
 
-        &--schools {
-          left: calc(100% - 14rem);
-          top: 2rem;
-
-          @include respond(ntb) {
-            left: calc(100% - 8rem);
-            top: 8rem;
-          }
-
-          @include respond(tab-land) {
-            left: calc(100% - 6rem);
-            top: 6rem;
-          }
-
-          @include respond(phone) {
-            left: calc(100% - 4rem);
-            top: 4rem;
-          }
-        }
-
-        &--courses {
-          left: calc(100% - 14rem);
-          top: 2rem;
-
-          @include respond(ntb) {
-            left: calc(100% - 8rem);
-            top: 8rem;
-          }
-
-          @include respond(tab-land) {
-            left: calc(100% - 6rem);
-            top: 6rem;
-          }
-
-          @include respond(phone) {
-            left: calc(100% - 4rem);
-            top: 4rem;
-          }
-        }
-      }
-
-      .education__text {
-        border-radius: 2rem;
-        background: $color-white;
-        left: 5rem;
-        width: 70rem;
-        top: 55%;
-        height: 40rem;
-
-        &--schools {
-          left: calc(50% - 36rem);
-        }
-
-        &--courses {
-          left: calc(50% + 36rem);
-        }
+      &--schools {
+        left: calc(100% - 14rem);
+        top: 2rem;
 
         @include respond(ntb) {
-          border-radius: 2rem;
-          width: 95%;
-          height: 40rem;
-          left: 50%;
-          background: $color-white;
+          left: calc(100% - 8rem);
+          top: 8rem;
+        }
 
-          &--schools {
-            top: 50rem;
-          }
+        @include respond(tab-land) {
+          left: calc(100% - 6rem);
+          top: 6rem;
+        }
 
-          &--courses {
-            top: 92rem;
-          }
+        @include respond(phone) {
+          left: calc(100% - 4rem);
+          top: 4rem;
         }
       }
 
-      .education__heading,
-      .education__paragraph {
-        opacity: 1;
-        visibility: visible;
-      }
+      &--courses {
+        left: calc(100% - 14rem);
+        top: 2rem;
 
-      .education__heading {
-        font-size: $font-size-h3;
-        padding-bottom: 0.5rem;
+        @include respond(ntb) {
+          left: calc(100% - 8rem);
+          top: 8rem;
+        }
+
+        @include respond(tab-land) {
+          left: calc(100% - 6rem);
+          top: 6rem;
+        }
 
         @include respond(phone) {
-            font-size: 2.5rem;
-          }
-      }
-
-      .education__paragraph {
-        font-size: $font-size-h5;
-        padding-bottom: 2rem;
+          left: calc(100% - 4rem);
+          top: 4rem;
+        }
       }
     }
-  }
 
-  &__header {
-    color: $color-white;
-    letter-spacing: 1rem;
-    top: 30rem;
+    .education__text {
+      border-radius: 2rem;
+      background: $color-white;
+      left: 5rem;
+      width: 70rem;
+      height: 50rem;
+      top: 55%;
+
+      &--schools {
+        left: calc(50% - 36rem);
+      }
+
+      &--courses {
+        left: calc(50% + 36rem);
+      }
+
+      @include respond(ntb) {
+        border-radius: 2rem;
+        width: 95%;
+        height: 40rem;
+        left: 50%;
+        background: $color-white;
+
+        &--schools {
+          top: 50rem;
+        }
+
+        &--courses {
+          top: 92rem;
+        }
+      }
+    }
+
+    .education__heading,
+    .education__paragraph {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .education__heading {
+      font-size: $font-size-h3;
+      padding-bottom: 0.5rem;
+
+      @include respond(phone) {
+        font-size: 2.5rem;
+      }
+    }
+
+    .education__paragraph {
+      font-size: $font-size-h5;
+      padding-bottom: 2rem;
+    }
   }
 
   &__icon {
