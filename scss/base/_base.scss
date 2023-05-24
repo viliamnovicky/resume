@@ -8,6 +8,14 @@
 body {
   overflow-x: hidden;
   padding: 3rem;
+
+  @include respond(tab-land) {
+    padding: 2rem;
+  }
+
+  @include respond(tab-port) {
+    padding: 1rem;
+  }
 }
 
 html {
@@ -51,6 +59,10 @@ img {
 
 .color-primary {
   color: $color-primary !important;
+}
+
+.background-primary {
+  background: $color-primary !important;
 }
 
 .background-secondary {

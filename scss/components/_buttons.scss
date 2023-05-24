@@ -163,4 +163,17 @@
       filter: $color-filter-secondary;
     }
   }
+
+  &__footer {
+    width: 5rem;
+    height: 5rem;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    background: $color-light;
+
+    img {
+      width: 100%;
+    }
+  }
 }

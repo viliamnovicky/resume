@@ -22,6 +22,12 @@
             margin-top: -10rem;
             justify-content: space-evenly;
         }
+
+        @include respond(tab-port) {
+            height: 180rem;
+            margin-top: -5rem;
+            justify-content: space-evenly;
+        }
     }
 
     &__education {
@@ -31,6 +37,11 @@
 
         @include respond(tab-land) {
             height: 120rem;
+            justify-content: center;
+        }
+
+        @include respond(phone) {
+            height: 105rem;
             justify-content: center;
         }
     }
@@ -43,5 +54,9 @@
     &__projects {
         background: $color-secondary;
         margin-top: -5rem;
+
+        @include respond(tab-land) {
+            margin-top: -.5rem;
+        }
     }
 }

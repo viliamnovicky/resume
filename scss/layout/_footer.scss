@@ -1,0 +1,19 @@
+.footer {
+    background: $color-primary;
+    margin-top: -.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    gap: 10rem;
+
+    &__social {
+        display: flex;
+        gap: 2rem;
+    }
+
+    p {
+        font-size: 3rem;
+        color: $color-light;
+    }
+}

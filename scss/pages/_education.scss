@@ -57,6 +57,10 @@
         left: calc(50% + 36rem);
       }
 
+      @include respond(ntb) {
+        width: 40vw;
+      }
+
       @include respond(tab-land) {
         border-radius: 2rem;
         width: 95%;
@@ -71,6 +75,10 @@
         &--courses {
           top: 35rem;
         }
+      }
+
+      @include respond(phone) {
+        height: 40rem;
       }
     }
 
@@ -174,6 +182,10 @@
       }
     }
 
+    @include respond(phone) {
+      height: 40rem;
+    }
+
     &--schools {
       background: $color-white;
     }
@@ -210,6 +222,12 @@
       position: absolute;
       top: 0.5rem;
       left: 35rem;
+
+      @include respond(tab-land) {
+        top: 0rem;
+        left: auto;
+        right: 5rem;
+      }
     }
 
     &:first-child {

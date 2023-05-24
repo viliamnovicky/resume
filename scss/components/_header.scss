@@ -37,6 +37,12 @@
             letter-spacing:3.6rem;
             padding-left: 3.6rem;
         }
+
+        @include respond(tab-port) {
+            letter-spacing:1rem;
+            padding-left: 1rem;
+            font-size: 3rem;
+        }
     }
 }
 
