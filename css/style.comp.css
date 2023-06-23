@@ -36,6 +36,16 @@ body {
   overflow-x: hidden;
   padding: 3rem;
 }
+@media only screen and (max-width: 78em) {
+  body {
+    padding: 2rem;
+  }
+}
+@media only screen and (max-width: 62.5em) {
+  body {
+    padding: 1rem;
+  }
+}
 
 html {
   font-size: 62.5%;
@@ -76,6 +86,10 @@ img {
 
 .color-primary {
   color: #3d5a80 !important;
+}
+
+.background-primary {
+  background: #3d5a80 !important;
 }
 
 .background-secondary {
@@ -237,6 +251,17 @@ img {
   width: 80%;
   filter: invert(51%) sepia(86%) saturate(1893%) hue-rotate(332deg) brightness(101%) contrast(87%);
 }
+.btn__footer {
+  width: 5rem;
+  height: 5rem;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  background: #effeff;
+}
+.btn__footer img {
+  width: 100%;
+}
 
 .img__avatar {
   border-radius: 50%;
@@ -339,6 +364,13 @@ img {
     padding-left: 3.6rem;
   }
 }
+@media only screen and (max-width: 62.5em) {
+  .header__h2 {
+    letter-spacing: 1rem;
+    padding-left: 1rem;
+    font-size: 3rem;
+  }
+}
 
 .heading {
   font-size: 4rem;
@@ -410,6 +442,13 @@ img {
     justify-content: space-evenly;
   }
 }
+@media only screen and (max-width: 62.5em) {
+  .section__address {
+    height: 180rem;
+    margin-top: -5rem;
+    justify-content: space-evenly;
+  }
+}
 .section__education {
   background: #ee6c4d;
   height: 80rem;
@@ -421,6 +460,12 @@ img {
     justify-content: center;
   }
 }
+@media only screen and (max-width: 37.5em) {
+  .section__education {
+    height: 105rem;
+    justify-content: center;
+  }
+}
 .section__program-skills {
   background: #effeff;
   margin-top: -5rem;
@@ -429,12 +474,66 @@ img {
   background: #ee6c4d;
   margin-top: -5rem;
 }
+@media only screen and (max-width: 78em) {
+  .section__projects {
+    margin-top: -0.5rem;
+  }
+}
+.section__about {
+  background: #effeff;
+  margin-top: -0.5rem;
+}
 
 .wave {
   width: 100%;
   height: 100%;
   padding: 0;
   margin: 0;
+}
+
+.footer {
+  background: #3d5a80;
+  margin-top: -0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+  gap: 10rem;
+}
+.footer__social {
+  display: flex;
+  gap: 2rem;
+}
+.footer p {
+  font-size: 3rem;
+  color: #effeff;
+}
+
+.about {
+  display: flex;
+}
+.about__text {
+  color: #fff;
+  width: 65rem;
+  height: 65rem;
+  display: grid;
+  border-radius: 50%;
+  margin-top: 10rem;
+  justify-content: center;
+  align-items: center;
+  text-align: justify;
+  padding: 4rem;
+  font-size: 2rem;
+  z-index: 2;
+}
+.about__bg {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  width: 100%;
+  top: 60%;
 }
 
 .address {
@@ -672,6 +771,11 @@ img {
 .education:hover .education__text--courses {
   left: calc(50% + 36rem);
 }
+@media only screen and (max-width: 85.5em) {
+  .education:hover .education__text {
+    width: 40vw;
+  }
+}
 @media only screen and (max-width: 78em) {
   .education:hover .education__text {
     border-radius: 2rem;
@@ -685,6 +789,11 @@ img {
   }
   .education:hover .education__text--courses {
     top: 35rem;
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .education:hover .education__text {
+    height: 40rem;
   }
 }
 .education:hover .education__heading,
@@ -791,6 +900,11 @@ img {
     top: 35rem;
   }
 }
+@media only screen and (max-width: 37.5em) {
+  .education__text {
+    height: 40rem;
+  }
+}
 .education__text--schools {
   background: #fff;
 }
@@ -826,6 +940,13 @@ img {
   position: absolute;
   top: 0.5rem;
   left: 35rem;
+}
+@media only screen and (max-width: 78em) {
+  .education__heading span {
+    top: 0rem;
+    left: auto;
+    right: 5rem;
+  }
 }
 .education__heading:first-child {
   margin-top: 2rem;
@@ -1182,6 +1303,11 @@ img {
 }
 @media only screen and (max-width: 62.5em) {
   .program__cont {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media only screen and (max-width: 37.5em) {
+  .program__cont {
     grid-template-columns: repeat(2, 1fr);
   }
 }
@@ -1208,27 +1334,59 @@ img {
   margin-top: 5rem;
   margin-bottom: 5rem;
 }
+@media only screen and (max-width: 78em) {
+  .projects__cont {
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 2rem;
+  }
+}
+@media only screen and (max-width: 62.5em) {
+  .projects__cont {
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 2rem;
+  }
+}
 .projects__project {
   display: grid;
   justify-self: center;
+  grid-template-columns: 1fr;
   border-radius: 1rem;
   margin: auto;
   align-items: center;
-}
-.projects__project img {
-  width: 80%;
-  margin: auto;
-  padding: 2rem;
+  margin-top: 5rem;
   background: #fff;
-  border-radius: 1rem;
+  width: 90%;
 }
 .projects__link {
   display: flex;
   justify-content: center;
+  width: 95%;
+  margin: auto;
+  border-radius: 1rem;
+}
+.projects__link img {
+  width: 100%;
+  height: 32rem;
+  margin: auto;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 3rem;
 }
 .projects__header {
   margin-top: 15rem;
   color: #fff;
+}
+.projects__h2 {
+  font-size: 2rem;
+  text-align: center;
+  text-transform: uppercase;
+  padding-bottom: 2rem;
+}
+.projects__p {
+  text-align: center;
+  padding-bottom: 2rem;
+  width: 95%;
+  margin: auto;
 }
 
 /*# sourceMappingURL=style.comp.css.map */

@@ -43,7 +43,7 @@ educationSection.addEventListener("click", function(e) {
         const certificate = e.target.closest(".certificate")
         console.log("certificate");
         modal.classList.remove("hidden")
-        modalImg.src = `../img/${certificate.id}.jpg`
+        modalImg.src = `./img/${certificate.id}.jpg`
     }
 })
 
